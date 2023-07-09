@@ -20,8 +20,7 @@
   ],
   "scripts": {
     "dev": "rollup -c -w --environment BUILD:development",
-    "prod": "rollup -c --environment BUILD:production",
-    "dist": "rollup -c --environment BUILD:package"
+    "prod": "rollup -c --environment BUILD:production"
   },
   "devDependencies": {
     "@alumna/reflect": "^1.0.5",
