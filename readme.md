@@ -13,7 +13,7 @@ In the **root** folder, run :
     npm link amstramgram-gallery-generator
     AGG
 
-Look at the new created **imgProcessed** folder.
+Look at the newly created **imgProcessed** folder.
 
 &nbsp;
 ___
