@@ -1,6 +1,7 @@
 *.code-workspace
 .vscode
 node_modules
+dist
 docs_dev/*
 !docs_dev/assets
 work
