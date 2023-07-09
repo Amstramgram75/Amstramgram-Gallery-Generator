@@ -1,0 +1,1100 @@
+<!doctype html><html lang="en" class="loading"><head><title>Amstramgram Gallery - Demo & docs</title><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="description" content="An ES6 class to use lightbox."><meta name="author" content="onfaitdessites.fr"><link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png"><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0"><style>body,html{background:#121212;height:100%}.loading:not(.loaded),.loading:not(.loaded) body{overflow:hidden}.loading body{opacity:0}.loading:after,.loading:before{border-radius:50%;content:"";display:block;height:100px;left:50%;position:fixed;top:50%;width:100px}.loading:before{border:10px solid red;box-sizing:border-box;transform:translate(-50%,-50%)}.loading:after{animation:r 1.5s linear infinite;background:linear-gradient(90deg,#000,rgba(0,0,0,.9) 30%,rgba(0,0,0,.7) 70%,transparent)}@keyframes r{0%{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(1turn)}}</style><link rel="preload" href="js/index.js" crossorigin as="script"><script>if("function"==typeof Number.isInteger&&Array.from&&Array.prototype.includes&&"function"==typeof window.CustomEvent&&"function"==typeof window.WeakSet)console.log("%cNone of the Amstramgram Gallery polyfills are needed","color: green;");else{console.log("Loading Amstramgram Gallery polyfills");var d=document,s=d.createElement("script");s.async="false",s.defer="true",s.src="js/polyfills/amstramgramGalleryPolyfills.min.js",d.head.appendChild(s)}</script><script>try{RegExp("(?<test>a)")}catch(e){console.log("Loading Page polyfills");var d=document,s=d.createElement("script");s.async="false",s.defer="true",s.src="js/polyfills/polyfills.min.js",d.head.appendChild(s)}</script><script>var d=document,s=d.createElement("script");s.async="false",s.defer="true";try{eval("class test{#private;#method(){};constructor(){}}"),console.log("%cClass private fields are supported : Loading ES6 module","color: green;"),s.type="module",s.src="js/index.js"}catch(e){console.log("Class private fields are not supported : Loading IIFE script"),s.src="js/noModule/index.js"}d.head.appendChild(s);</script></head><body ondragstart="return!1"> <input class="menu-btn" type="checkbox" id="menu-btn" autocomplete="off"><header class="header"> <a href="https://github.com/Amstramgram75/Amstramgram-Gallery" class="logo">mstramgram <div> <div class="github"></div> <div> <div class="gallery">allery </div> </div> </div></a> </header><aside> <div class="aside"> <label class="menu-icon" for="menu-btn"><span></span></label> </div></aside> <div class="content-wrapper"> <div class="content"> <h2 id="demo">Demo</h2><h3>Basic</h3><div class="content-block demo-gallery"> <div class="demo-basic-gallery"> <div data-href="assets/img/basic/pexels-irina-iriser-673857_1406_2000.jpg" data-caption="<a href='https://www.pexels.com/photo/tilt-shift-lens-photo-of-blue-flowers-673857/' target='_blank'>@Irina Iriser - Tilt Shift Lens Photo of Blue Flowers.</a>" data-width="1406" data-height="2000" data-title="Blue Flowers by Irina Iriser"> <img src="assets/img/thumbs/basic/pexels-irina-iriser-673857.jpg" alt="Blue Flowers by Irina Iriser"> </div> <div data-href="assets/img/basic/pexels-pixabay-414083_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/pink-flower-field-414083/' target='_blank'>@Pixabay - Pink Flower Field.</a>" data-width="2000" data-height="1333" data-title="Pink Flower Field by Pixabay"> <img src="assets/img/thumbs/basic/pexels-pixabay-414083.jpg" alt="Pink Flower Field by Pixabay"> </div> <div data-href="assets/img/basic/pexels-venelin-dimitrov-3476312_2000_1320.jpg" data-caption="<a href='https://www.pexels.com/photo/purple-flower-field-during-sunset-3476312/' target='_blank'>@Venelin Dimitrov - Purple Flower Field during Sunset.</a>" data-width="2000" data-height="1320" data-title="Purple Flower Field during Sunset by Venelin Dimitrov"> <img src="assets/img/thumbs/basic/pexels-venelin-dimitrov-3476312.jpg" alt="Purple Flower Field during Sunset by Venelin Dimitrov"> </div> <div data-href="assets/img/basic/pexels-daniel-absi-2415138_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/photo-of-red-tulip-field-2415138/' target='_blank'>@Daniel Absi - Red Tulip Field.</a>" data-width="2000" data-height="1333" data-title="Red Tulip Field by Daniel Absi"> <img src="assets/img/thumbs/basic/pexels-daniel-absi-2415138.jpg" alt="Red Tulip Field by Daniel Absi"> </div> <div data-href="assets/img/basic/pexels-marek-rybarczyk-2677865_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/bed-of-red-and-yellow-petaled-flowers-2677865/' target='_blank'>@Marek Rybarczyk - Bed of Red and Yellow Petaled Flowers.</a>" data-width="2000" data-height="1333" data-title="Bed of Red and Yellow Petaled Flowers by Marek Rybarczyk"> <img src="assets/img/thumbs/basic/pexels-marek-rybarczyk-2677865.jpg" alt="Bed of Red and Yellow Petaled Flowers by Marek Rybarczyk"> </div> <div data-href="assets/img/basic/pexels-petr-ganaj-13320405_1224_2000.jpg" data-caption="<a href='https://www.pexels.com/photo/purple-flower-field-13320405/' target='_blank'>@Petr Ganaj - Purple Flower Field.</a>" data-width="1224" data-height="2000" data-title="Purple Flower Field by Petr Ganaj"> <img src="assets/img/thumbs/basic/pexels-petr-ganaj-13320405.jpg" alt="Purple Flower Field by Petr Ganaj"> </div> <div data-href="assets/img/basic/pexels-minamarie-michell-570041_2000_1325.jpg" data-caption="<a href='https://www.pexels.com/photo/landscape-photography-of-flower-garden-570041/' target='_blank'>@Mina-Marie Michell - Flower Garden.</a>" data-width="2000" data-height="1325" data-title="Flower Garden by Mina-Marie Michell"> <img src="assets/img/thumbs/basic/pexels-minamarie-michell-570041.jpg" alt="Flower Garden by Mina-Marie Michell"> </div> <div data-href="assets/img/basic/pexels-zetong-li-1911869_2000_1331.jpg" data-caption="<a href='https://www.pexels.com/photo/meadow-of-sunflowers-1911869/' target='_blank'>@Zetong Li - Meadow of Sunflowers.</a>" data-width="2000" data-height="1331" data-title="Meadow of Sunflowers by Zetong Li"> <img src="assets/img/thumbs/basic/pexels-zetong-li-1911869.jpg" alt="Meadow of Sunflowers by Zetong Li"> </div> <div data-href="assets/img/basic/pexels-joao-jesus-2480072_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/selective-focus-photo-of-a-red-tulip-flower-2480072/' target='_blank'>@João Jesus - Red tulip flower.</a>" data-width="2000" data-height="1333" data-alt="Red tulip flower by João Jesus" data-title="Red tulip flower by João Jesus"> <p>One more to see</p> </div> </div> </div><div class="code show-hide"> <input type="checkbox" id="show-code01" class="show-code" autocomplete="off"> <pre>
+    <h4>JAVASCRIPT</h4>
+<code class="language-js">import AmstramgramGallery from 'Amstramgram-Gallery'
+
+...
+
+//Change the default caption font family from Verdana (inherit from body style) to Arial
+AmstramgramGallery.defaultOptions = {captionFontFamily: 'Arial, Helvetica, Liberation Sans, FreeSans, sans-serif'}
+
+//Initialize the gallery
+new AmstramgramGallery('.demo-basic-gallery > div')</code>
+<h4>HTML</h4>
+<code class="language-html">&lt;div class="demo-basic-gallery"&gt;
+  &lt;div data-href="assets/img/basic/pexels-irina-iriser-673857_1406_2000.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/tilt-shift-lens-photo-of-blue-flowers-673857/' target='_blank'&gt;@Irina Iriser - Tilt Shift Lens Photo of Blue Flowers.&lt;/a&gt;"
+    data-width="1406" data-height="2000" data-title="Blue Flowers by Irina Iriser"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-irina-iriser-673857.jpg" alt="Blue Flowers by Irina Iriser"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-pixabay-414083_2000_1333.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/pink-flower-field-414083/' target='_blank'&gt;@Pixabay - Pink Flower Field.&lt;/a&gt;"
+    data-width="2000" data-height="1333" data-title="Pink Flower Field by Pixabay"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-pixabay-414083.jpg" alt="Pink Flower Field by Pixabay"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-venelin-dimitrov-3476312_2000_1320.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/purple-flower-field-during-sunset-3476312/' target='_blank'&gt;@Venelin Dimitrov - Purple Flower Field during Sunset.&lt;/a&gt;"
+    data-width="2000" data-height="1320" data-title="Purple Flower Field during Sunset by Venelin Dimitrov"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-venelin-dimitrov-3476312.jpg"
+      alt="Purple Flower Field during Sunset by Venelin Dimitrov"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-daniel-absi-2415138_2000_1333.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/photo-of-red-tulip-field-2415138/' target='_blank'&gt;@Daniel Absi - Red Tulip Field.&lt;/a&gt;"
+    data-width="2000" data-height="1333" data-title="Red Tulip Field by Daniel Absi"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-daniel-absi-2415138.jpg" alt="Red Tulip Field by Daniel Absi"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-marek-rybarczyk-2677865_2000_1333.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/bed-of-red-and-yellow-petaled-flowers-2677865/' target='_blank'&gt;@Marek Rybarczyk - Bed of Red and Yellow Petaled Flowers.&lt;/a&gt;"
+    data-width="2000" data-height="1333" data-title="Bed of Red and Yellow Petaled Flowers by Marek Rybarczyk"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-marek-rybarczyk-2677865.jpg"
+      alt="Bed of Red and Yellow Petaled Flowers by Marek Rybarczyk"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-petr-ganaj-13320405_1224_2000.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/purple-flower-field-13320405/' target='_blank'&gt;@Petr Ganaj - Purple Flower Field.&lt;/a&gt;"
+    data-width="1224" data-height="2000" data-title="Purple Flower Field by Petr Ganaj"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-petr-ganaj-13320405.jpg" alt="Purple Flower Field by Petr Ganaj"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-minamarie-michell-570041_2000_1325.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/landscape-photography-of-flower-garden-570041/' target='_blank'&gt;@Mina-Marie Michell - Flower Garden.&lt;/a&gt;"
+    data-width="2000" data-height="1325" data-title="Flower Garden by Mina-Marie Michell"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-minamarie-michell-570041.jpg" alt="Flower Garden by Mina-Marie Michell"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-zetong-li-1911869_2000_1331.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/meadow-of-sunflowers-1911869/' target='_blank'&gt;@Zetong Li - Meadow of Sunflowers.&lt;/a&gt;"
+    data-width="2000" data-height="1331" data-title="Meadow of Sunflowers by Zetong Li"&gt;
+    &lt;img src="assets/img/thumbs/basic/pexels-zetong-li-1911869.jpg" alt="Meadow of Sunflowers by Zetong Li"&gt;
+  &lt;/div&gt;
+  &lt;div data-href="assets/img/basic/pexels-joao-jesus-2480072_2000_1333.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/selective-focus-photo-of-a-red-tulip-flower-2480072/' target='_blank'&gt;@João Jesus - Red tulip flower.&lt;/a&gt;"
+    data-width="2000" data-height="1333" data-alt="Red tulip flower by João Jesus" data-title="Red tulip flower by João Jesus"&gt;
+    &lt;p&gt;One more to see&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre><label for="show-code01">Code</label> </div><div class="line"></div><h3>Responsive</h3><div class="content-block demo-gallery"> <div class="demo-responsive-gallery"> <a href="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.jpg" data-caption="<a href='https://www.pexels.com/photo/red-tulip-flower-field-2406382/' target='_blank'>@Avery Nielsen-Webb - Red Tulip Flower Field.</a><br><span style='font-size:0.8em;'>Intrinsic dimensions of the loaded <span class='type' style='font-weight:bold'></span>image&nbsp;: <span class='dim'></span></span>" data-width="1700" data-height="2267"> <script type="text/content">
+      <source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_400_533.avif"
+        media="(max-width: 400px), (max-height: 533px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_800_1067.avif"
+        media="(max-width: 800px), (max-height: 1067px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1300_1733.avif"
+        media="(max-width: 1300px), (max-height: 1733px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.avif"
+        media="(min-width: 1301px), (min-height: 1734px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_400_533.webp"
+        media="(max-width: 400px), (max-height: 533px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_800_1067.webp"
+        media="(max-width: 800px), (max-height: 1067px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1300_1733.webp"
+        media="(max-width: 1300px), (max-height: 1733px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.webp"
+        media="(min-width: 1301px), (min-height: 1734px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_400_533.jpg"
+        media="(max-width: 400px), (max-height: 533px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_800_1067.jpg"
+        media="(max-width: 800px), (max-height: 1067px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1300_1733.jpg"
+        media="(max-width: 1300px), (max-height: 1733px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.jpg"
+        media="(min-width: 1301px), (min-height: 1734px)"/>
+    </script> <img src="assets/img/thumbs/responsive/pexels-avery-nielsenwebb-2406382.jpg" alt="Red Tulip Flower Field by Avery Nielsen-Webb"> </a> <a href="assets/img/responsive/pexels-blaque-x-863963_1700_1133.jpg" data-caption="<a href='https://www.pexels.com/photo/macro-photography-of-red-petal-flower-863963/' target='_blank'>@Blaque X - Macro Photography of Red Petal Flower.</a><br><span style='font-size:0.8em;'>Intrinsic dimensions of the loaded <span class='type' style='font-weight:bold'></span>image&nbsp;: <span class='dim'></span></span>" data-width="1700" data-height="1133"> <script type="text/content">
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_400_267.avif"
+        media="(max-width: 400px), (max-height: 267px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_800_533.avif"
+        media="(max-width: 800px), (max-height: 533px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_1300_867.avif"
+        media="(max-width: 1300px), (max-height: 867px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_1700_1133.avif"
+        media="(max-width: 1700px), (max-height: 1133px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_2000_1333.avif"
+        media="(max-width: 2000px), (max-height: 1333px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_2600_1733.avif"
+      media="(max-width: 2600px), (max-height: 1733px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_3500_2333.avif"
+        media="(min-width: 2601px), (min-height: 1734px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_400_267.webp"
+        media="(max-width: 400px), (max-height: 267px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_800_533.webp"
+        media="(max-width: 800px), (max-height: 533px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_1300_867.webp"
+        media="(max-width: 1300px), (max-height: 867px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_1700_1133.webp"
+        media="(max-width: 1700px), (max-height: 1133px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_2000_1333.webp"
+        media="(max-width: 2000px), (max-height: 1333px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_2600_1733.webp"
+      media="(max-width: 2600px), (max-height: 1733px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_3500_2333.webp"
+        media="(min-width: 2601px), (min-height: 1734px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_400_267.jpg"
+        media="(max-width: 400px), (max-height: 267px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_800_533.jpg"
+        media="(max-width: 800px), (max-height: 533px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_1300_867.jpg"
+        media="(max-width: 1300px), (max-height: 867px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_1700_1133.jpg"
+        media="(max-width: 1700px), (max-height: 1133px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_2000_1333.jpeg"
+        media="(max-width: 2000px), (max-height: 1333px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_2600_1733.jpeg"
+      media="(max-width: 2600px), (max-height: 1733px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_3500_2333.jpeg"
+        media="(min-width: 2601px), (min-height: 1734px)"/>
+    </script> <img src="assets/img/thumbs/responsive/pexels-blaque-x-863963.jpg" alt="Red Petal Flower by Blaque X"> </a> <a href="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/yellow-dandelion-field-383640/' target='_blank'>@Tim Mossholder - Yellow Dandelion Field.</a><br><span style='font-size:0.8em;'>Intrinsic dimensions of the loaded <span class='type' style='font-weight:bold'></span>image&nbsp;: <span class='dim'></span></span>" data-width="2000" data-height="1333"> <script type="text/content">
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_400_267.avif"
+        media="(max-width: 400px), (max-height: 267px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_800_533.avif"
+        media="(max-width: 800px), (max-height: 533px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1300_867.avif"
+        media="(max-width: 1300px), (max-height: 867px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1700_1133.avif"
+        media="(max-width: 1700px), (max-height: 1133px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.avif"
+        media="(max-width: 2000px), (max-height: 1333px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2600_1733.avif"
+      media="(max-width: 2600px), (max-height: 1733px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_3500_2333.avif"
+        media="(min-width: 2601px), (min-height: 1734px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_400_267.webp"
+        media="(max-width: 400px), (max-height: 267px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_800_533.webp"
+        media="(max-width: 800px), (max-height: 533px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1300_867.webp"
+        media="(max-width: 1300px), (max-height: 867px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1700_1133.webp"
+        media="(max-width: 1700px), (max-height: 1133px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.webp"
+        media="(max-width: 2000px), (max-height: 1333px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2600_1733.webp"
+      media="(max-width: 2600px), (max-height: 1733px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_3500_2333.webp"
+        media="(min-width: 2601px), (min-height: 1734px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_400_267.jpg"
+        media="(max-width: 400px), (max-height: 267px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_800_533.jpg"
+        media="(max-width: 800px), (max-height: 533px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1300_867.jpg"
+        media="(max-width: 1300px), (max-height: 867px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1700_1133.jpg"
+        media="(max-width: 1700px), (max-height: 1133px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.jpeg"
+        media="(max-width: 2000px), (max-height: 1333px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2600_1733.jpeg"
+      media="(max-width: 2600px), (max-height: 1733px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_3500_2333.jpeg"
+        media="(min-width: 2601px), (min-height: 1734px)"/>
+    </script> <img src="assets/img/thumbs/responsive/pexels-tim-mossholder-383640.jpg" alt="Yellow Dandelion Field by Tim Mossholder"> </a> <a href="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.jpg" data-caption="<a href='https://www.pexels.com/photo/pine-trees-and-snow-3538659/' target='_blank'>&copy;TomTookIt - Pine Trees and Snow</a><br><span style='font-size:0.8em;'>Intrinsic dimensions of the loaded <span class='type' style='font-weight:bold'></span>image&nbsp;: <span class='dim'></span></span>" data-width="1700" data-height="2250"> <script type="text/content">
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_400_600.avif"
+        media="(max-width: 400px), (max-height: 600px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_800_1200.avif"
+        media="(max-width: 800px), (max-height: 1200px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_1300_1950.avif"
+        media="(max-width: 1300px), (max-height: 1950px)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.avif"
+        media="(max-width: 1700), (max-height: 2550)"/>
+      <source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_2000_3000.avif"
+        media="(min-width: 1701px), (min-height: 2551px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_400_600.webp"
+        media="(max-width: 400px), (max-height: 600px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_800_1200.webp"
+        media="(max-width: 800px), (max-height: 1200px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_1300_1950.webp"
+        media="(max-width: 1300px), (max-height: 1950px)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.webp"
+        media="(max-width: 1700), (max-height: 2550)"/>
+      <source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_2000_3000.webp"
+        media="(min-width: 1701px), (min-height: 2551px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_400_600.jpg"
+        media="(max-width: 400px), (max-height: 600px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_800_1200.jpg"
+        media="(max-width: 800px), (max-height: 1200px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_1300_1950.jpg"
+        media="(max-width: 1300px), (max-height: 1950px)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.jpg"
+        media="(max-width: 1700), (max-height: 2550)"/>
+      <source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_2000_3000.jpg"
+        media="(min-width: 1701px), (min-height: 2551px)"/>
+    </script> <img src="assets/img/thumbs/responsive/pexels-tomtookit-3538659.jpg" alt="Pine Trees and Snow by TomTookIt"> </a> </div> </div><div class="code show-hide"> <input type="checkbox" id="show-code02" class="show-code" autocomplete="off"> <pre>
+    <h4>JAVASCRIPT</h4>
+<code class="language-js">new AmstramgramGallery('.demo-responsive-gallery a', {
+  //Change all default options
+  name: 'demoResponsiveGallery',
+  closeTitle: 'Fermer',
+  closeAriaLabel: 'Fermer',
+  previousTitle: 'Précédent',
+  previousAriaLabel: 'Précédent',
+  nextTitle: 'Suivant',
+  nextAriaLabel: 'Suivant',
+  overlayBackground: '#fffffff0',
+  navItemsBackground: '#eee',
+  navItemsColor: '#600001',
+  navItemsBackgroundHover: '#aaa',
+  navItemsColorHover: '#a10304',
+  captionBackground: '#eeeeeec2',
+  captionColor: '#444'
+}, function () {
+  //Function called after gallery initialization.
+  //this = gallery instance
+  //Some logs (open dev tools to check the output):
+  const s1 = 'color: green; font-weight:bold;', s2 = 'color: inherit;'
+  console.log(`%cGallery named "${this.name}" has been initialized with these options :`, s1)
+  Object.keys(this.options).forEach(k => {
+    console.log(`%c	- ${k}:`+` %c ${this.options[k]}`, s1, s2)
+  })
+  //Listen to the amst_gallery-load event emitted each time the gallery loads an image
+  this.on('amst_gallery-load', onImgLoad)
+})
+
+/**
+ * @param {Object} item : object holding properties of the loaded img
+ * @description Called each time an image has been loaded
+ *              Update the caption with the type and the dimensions 
+ *              of the displayed image
+ */
+function onImgLoad(e) {
+  if (AmstramgramGallery.visible) {
+    const
+      item = e.current,
+      //HTML figure element containing the image
+      figures = item.container,
+      //Get the image extension
+      type = item.currentSrc.split('.')[1].toUpperCase(),
+      width = item.width + 'px',
+      height = item.height + 'px',
+      text = `${width}&nbsp;/&nbsp;${height}.`
+    //Update the caption
+    figures.forEach(f => {
+      if (f.querySelector('span.type')) f.querySelector('span.type').innerHTML = type + '&nbsp;'
+      if (f.querySelector('span.dim')) f.querySelector('span.dim').innerHTML = text
+    })
+  }
+}
+</code>
+<h4>HTML</h4>
+<code class="language-html">&lt;div class="demo-responsive-gallery"&gt;
+  &lt;a href="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/red-tulip-flower-field-2406382/' target='_blank'&gt;@Avery Nielsen-Webb - Red Tulip Flower Field.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Intrinsic dimensions of the loaded &lt;span class='type' style='font-weight:bold'&gt;&lt;/span&gt;image&nbsp;: &lt;span class='dim'&gt;&lt;/span&gt;&lt;/span&gt;"
+    data-width="1700" data-height="2267"&gt;
+    &lt;script type="text/content"&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_400_533.avif"
+        media="(max-width: 400px), (max-height: 533px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_800_1067.avif"
+        media="(max-width: 800px), (max-height: 1067px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1300_1733.avif"
+        media="(max-width: 1300px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.avif"
+        media="(min-width: 1301px), (min-height: 1734px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_400_533.webp"
+        media="(max-width: 400px), (max-height: 533px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_800_1067.webp"
+        media="(max-width: 800px), (max-height: 1067px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1300_1733.webp"
+        media="(max-width: 1300px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.webp"
+        media="(min-width: 1301px), (min-height: 1734px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_400_533.jpg"
+        media="(max-width: 400px), (max-height: 533px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_800_1067.jpg"
+        media="(max-width: 800px), (max-height: 1067px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1300_1733.jpg"
+        media="(max-width: 1300px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-avery-nielsenwebb-2406382_1700_2267.jpg"
+        media="(min-width: 1301px), (min-height: 1734px)"/&gt;
+    &lt;/script&gt;
+    &lt;img src="assets/img/thumbs/responsive/pexels-avery-nielsenwebb-2406382.jpg" alt="Red Tulip Flower Field by Avery Nielsen-Webb"&gt;
+  &lt;/a&gt;
+  &lt;a href="assets/img/responsive/pexels-blaque-x-863963_1700_1133.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/macro-photography-of-red-petal-flower-863963/' target='_blank'&gt;@Blaque X - Macro Photography of Red Petal Flower.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Intrinsic dimensions of the loaded &lt;span class='type' style='font-weight:bold'&gt;&lt;/span&gt;image&nbsp;: &lt;span class='dim'&gt;&lt;/span&gt;&lt;/span&gt;"
+    data-width="1700" data-height="1133"&gt;
+    &lt;script type="text/content"&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_400_267.avif"
+        media="(max-width: 400px), (max-height: 267px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_800_533.avif"
+        media="(max-width: 800px), (max-height: 533px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_1300_867.avif"
+        media="(max-width: 1300px), (max-height: 867px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_1700_1133.avif"
+        media="(max-width: 1700px), (max-height: 1133px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_2000_1333.avif"
+        media="(max-width: 2000px), (max-height: 1333px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_2600_1733.avif"
+      media="(max-width: 2600px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-blaque-x-863963_3500_2333.avif"
+        media="(min-width: 2601px), (min-height: 1734px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_400_267.webp"
+        media="(max-width: 400px), (max-height: 267px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_800_533.webp"
+        media="(max-width: 800px), (max-height: 533px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_1300_867.webp"
+        media="(max-width: 1300px), (max-height: 867px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_1700_1133.webp"
+        media="(max-width: 1700px), (max-height: 1133px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_2000_1333.webp"
+        media="(max-width: 2000px), (max-height: 1333px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_2600_1733.webp"
+      media="(max-width: 2600px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-blaque-x-863963_3500_2333.webp"
+        media="(min-width: 2601px), (min-height: 1734px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_400_267.jpg"
+        media="(max-width: 400px), (max-height: 267px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_800_533.jpg"
+        media="(max-width: 800px), (max-height: 533px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_1300_867.jpg"
+        media="(max-width: 1300px), (max-height: 867px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_1700_1133.jpg"
+        media="(max-width: 1700px), (max-height: 1133px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_2000_1333.jpeg"
+        media="(max-width: 2000px), (max-height: 1333px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_2600_1733.jpeg"
+      media="(max-width: 2600px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-blaque-x-863963_3500_2333.jpeg"
+        media="(min-width: 2601px), (min-height: 1734px)"/&gt;
+    &lt;/script&gt;
+    &lt;img src="assets/img/thumbs/responsive/pexels-blaque-x-863963.jpg" alt="Red Petal Flower by Blaque X"&gt;
+  &lt;/a&gt;
+  &lt;a href="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/yellow-dandelion-field-383640/' target='_blank'&gt;@Tim Mossholder - Yellow Dandelion Field.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Intrinsic dimensions of the loaded &lt;span class='type' style='font-weight:bold'&gt;&lt;/span&gt;image&nbsp;: &lt;span class='dim'&gt;&lt;/span&gt;&lt;/span&gt;"
+    data-width="2000" data-height="1333"&gt;
+    &lt;script type="text/content"&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_400_267.avif"
+        media="(max-width: 400px), (max-height: 267px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_800_533.avif"
+        media="(max-width: 800px), (max-height: 533px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1300_867.avif"
+        media="(max-width: 1300px), (max-height: 867px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1700_1133.avif"
+        media="(max-width: 1700px), (max-height: 1133px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.avif"
+        media="(max-width: 2000px), (max-height: 1333px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2600_1733.avif"
+      media="(max-width: 2600px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tim-mossholder-383640_3500_2333.avif"
+        media="(min-width: 2601px), (min-height: 1734px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_400_267.webp"
+        media="(max-width: 400px), (max-height: 267px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_800_533.webp"
+        media="(max-width: 800px), (max-height: 533px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1300_867.webp"
+        media="(max-width: 1300px), (max-height: 867px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1700_1133.webp"
+        media="(max-width: 1700px), (max-height: 1133px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.webp"
+        media="(max-width: 2000px), (max-height: 1333px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2600_1733.webp"
+      media="(max-width: 2600px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tim-mossholder-383640_3500_2333.webp"
+        media="(min-width: 2601px), (min-height: 1734px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_400_267.jpg"
+        media="(max-width: 400px), (max-height: 267px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_800_533.jpg"
+        media="(max-width: 800px), (max-height: 533px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1300_867.jpg"
+        media="(max-width: 1300px), (max-height: 867px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_1700_1133.jpg"
+        media="(max-width: 1700px), (max-height: 1133px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2000_1333.jpeg"
+        media="(max-width: 2000px), (max-height: 1333px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_2600_1733.jpeg"
+      media="(max-width: 2600px), (max-height: 1733px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tim-mossholder-383640_3500_2333.jpeg"
+        media="(min-width: 2601px), (min-height: 1734px)"/&gt;
+    &lt;/script&gt;
+    &lt;img src="assets/img/thumbs/responsive/pexels-tim-mossholder-383640.jpg" alt="Yellow Dandelion Field by Tim Mossholder"&gt;
+  &lt;/a&gt;
+  &lt;a href="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/pine-trees-and-snow-3538659/' target='_blank'&gt;&copy;TomTookIt - Pine Trees and Snow&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Intrinsic dimensions of the loaded &lt;span class='type' style='font-weight:bold'&gt;&lt;/span&gt;image&nbsp;: &lt;span class='dim'&gt;&lt;/span&gt;&lt;/span&gt;"
+    data-width="1700" data-height="2250"&gt;
+    &lt;script type="text/content"&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_400_600.avif"
+        media="(max-width: 400px), (max-height: 600px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_800_1200.avif"
+        media="(max-width: 800px), (max-height: 1200px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_1300_1950.avif"
+        media="(max-width: 1300px), (max-height: 1950px)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.avif"
+        media="(max-width: 1700), (max-height: 2550)"/&gt;
+      &lt;source type="image/avif" srcset="assets/img/responsive/pexels-tomtookit-3538659_2000_3000.avif"
+        media="(min-width: 1701px), (min-height: 2551px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_400_600.webp"
+        media="(max-width: 400px), (max-height: 600px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_800_1200.webp"
+        media="(max-width: 800px), (max-height: 1200px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_1300_1950.webp"
+        media="(max-width: 1300px), (max-height: 1950px)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.webp"
+        media="(max-width: 1700), (max-height: 2550)"/&gt;
+      &lt;source type="image/webp" srcset="assets/img/responsive/pexels-tomtookit-3538659_2000_3000.webp"
+        media="(min-width: 1701px), (min-height: 2551px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_400_600.jpg"
+        media="(max-width: 400px), (max-height: 600px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_800_1200.jpg"
+        media="(max-width: 800px), (max-height: 1200px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_1300_1950.jpg"
+        media="(max-width: 1300px), (max-height: 1950px)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_1700_2550.jpg"
+        media="(max-width: 1700), (max-height: 2550)"/&gt;
+      &lt;source type="image/jpeg" srcset="assets/img/responsive/pexels-tomtookit-3538659_2000_3000.jpg"
+        media="(min-width: 1701px), (min-height: 2551px)"/&gt;
+    &lt;/script&gt;
+    &lt;img src="assets/img/thumbs/responsive/pexels-tomtookit-3538659.jpg" alt="Pine Trees and Snow by TomTookIt"&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre> <label for="show-code02">Code</label> </div><div class="line"></div><h3>Button</h3><div class="content-block"> <div class="demo-button-gallery"> <button>Click me !</button>  <div class="demo-button-gallery-content" style="display:none"> <a href="assets/img/button/pexels-lukas-hartmann-1462011_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/body-of-water-1462011/' target='_blank'>@Lukas Hartmann - Body Of Water.</a><br><span style='font-size:0.8em;'>Image type is&nbsp;: <span class='type'></span>" data-width="2000" data-height="1333" data-alt="Body Of Water by Lukas Hartmann"> <script type="text/content">
+        <source type="image/avif" srcset="assets/img/button/pexels-lukas-hartmann-1462011_2000_1333.avif"/>
+        <source type="image/webp" srcset="assets/img/button/pexels-lukas-hartmann-1462011_2000_1333.webp">
+      </script> </a> <a href="assets/img/button/pexels-belle-co-342005_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/antelope-arizona-342005/' target='_blank'>@Belle Co - Antelope, Arizona.</a><br><span style='font-size:0.8em;'>Image type is&nbsp;: <span class='type'></span>" data-width="2000" data-height="1333" data-alt="Antelope, Arizona by Belle Co"> <script type="text/content">
+        <source type="image/avif" srcset="assets/img/button/pexels-belle-co-342005_2000_1333.avif"/>
+        <source type="image/webp" srcset="assets/img/button/pexels-belle-co-342005_2000_1333.webp">
+      </script> </a> <a href="assets/img/button/pexels-quang-nguyen-vinh-2131841_2000_1334.jpg" data-caption="<a href='https://www.pexels.com/photo/calm-body-of-water-during-golden-hour-2131841/' target='_blank'>@Quang Nguyen Vinh - Calm Body of Water during Golden Hour.</a><br><span style='font-size:0.8em;'>Image type is&nbsp;: <span class='type'></span>" data-width="2000" data-height="1334" data-alt="Calm Body of Water during Golden Hour by Quang Nguyen Vinh"> <script type="text/content">
+        <source type="image/avif" srcset="assets/img/button/pexels-quang-nguyen-vinh-2131841_2000_1334.avif"/>
+        <source type="image/webp" srcset="assets/img/button/pexels-quang-nguyen-vinh-2131841_2000_1334.webp">
+      </script> </a> <a href="assets/img/button/pexels-eberhard-grossgasteiger-1366835_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/mountain-rock-and-moon-1366835/' target='_blank'>@eberhard grossgasteiger - Mountain Rock and Moon.</a><br><span style='font-size:0.8em;'>Image type is&nbsp;: <span class='type'></span>" data-width="2000" data-height="1333" data-alt="Mountain Rock and Moon by eberhard grossgasteiger"> <script type="text/content">
+        <source type="image/avif" srcset="assets/img/button/pexels-eberhard-grossgasteiger-1366835_2000_1333.avif"/>
+        <source type="image/webp" srcset="assets/img/button/pexels-eberhard-grossgasteiger-1366835_2000_1333.webp">
+      </script> </a> </div> </div> </div><div class="code show-hide"> <input type="checkbox" id="show-code03" class="show-code" autocomplete="off"> <pre>
+    <h4>JAVASCRIPT</h4>
+<code class="language-js">import AmstramgramGallery from 'Amstramgram-Gallery'
+
+...
+
+const buttonGallery = new AmstramgramGallery('.demo-button-gallery a')
+  .on('amst_gallery-opening', updateArrowsTitles)
+  //Listen to amst_gallery-change event emitted each time the displayed image changes
+  .on('amst_gallery-change', function (e) {
+    //Some logs (open dev tools to check the output):
+    const s1 = 'color: green; font-weight: bold;', s2 = 'color: inherit;'
+    console.log(`%cDisplayed image in gallery named "${this.name}" has changed\n	from :	%c${e.previous.currentSrc}\n	%cto :	%c${e.current.currentSrc}`, s1, s2, s1, s2)
+    updateArrowsTitles.call(this, e)
+  })
+  //Listen to the amst_gallery-load event emitted each time the gallery loads an image
+  .on('amst_gallery-load', onImgLoad)
+
+function updateArrowsTitles(e){
+  const previousTitle = this.items[e.current.previous].alt
+  const nextTitle = this.items[e.current.next].alt
+  this.options = {
+    previousTitle: previousTitle, 
+    previousAriaLabel: previousTitle, 
+    nextTitle: nextTitle, 
+    nextAriaLabel: nextTitle
+  }
+}
+
+//A click on the button opens the gallery
+document.querySelector('.demo-button-gallery button').addEventListener('click', _ => buttonGallery.show())
+
+/**
+ * @param {Object} item : object holding properties of the loaded img
+ * @description Called each time an image has been loaded
+ *            	Update the caption with the type and the dimensions 
+ *            	of the displayed image
+ */
+function onImgLoad(e) {
+  if (AmstramgramGallery.visible) {
+    const
+      item = e.current,
+      //HTML figure element containing the image
+      figures = item.container,
+      //Get the image extension
+      type = item.currentSrc.split('.')[1].toUpperCase(),
+      width = item.width + 'px',
+      height = item.height + 'px',
+      text = `${width}&nbsp;/&nbsp;${height}.`
+    //Update the caption
+    figures.forEach(f => {
+      if (f.querySelector('span.type')) f.querySelector('span.type').innerHTML = type + '&nbsp;'
+      if (f.querySelector('span.dim')) f.querySelector('span.dim').innerHTML = text
+    })
+  }
+}
+</code>
+<h4>HTML</h4>
+<code class="language-html">&lt;div class="demo-button-gallery"&gt;
+  &lt;button&gt;Click me !&lt;/button&gt;
+  &lt;!-- The gallery anchors container is hidden by setting its display property to none --&gt;
+  &lt;div class="demo-button-gallery-content" style="display: none;"&gt;
+    &lt;a href="assets/img/button/pexels-lukas-hartmann-1462011_2000_1333.jpg"
+      data-caption="&lt;a href='https://www.pexels.com/photo/body-of-water-1462011/' target='_blank'&gt;@Lukas Hartmann - Body Of Water.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Image type is&nbsp;: &lt;span class='type'&gt;&lt;/span&gt;"
+      data-width="2000" data-height="1333" data-alt="Body Of Water by Lukas Hartmann"&gt;
+      &lt;script type="text/content"&gt;
+        &lt;source type="image/avif" srcset="assets/img/button/pexels-lukas-hartmann-1462011_2000_1333.avif"/&gt;
+        &lt;source type="image/webp" srcset="assets/img/button/pexels-lukas-hartmann-1462011_2000_1333.webp"&gt;
+      &lt;/script&gt;
+    &lt;/a&gt;
+    &lt;a href="assets/img/button/pexels-belle-co-342005_2000_1333.jpg"
+      data-caption="&lt;a href='https://www.pexels.com/photo/antelope-arizona-342005/' target='_blank'&gt;@Belle Co - Antelope, Arizona.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Image type is&nbsp;: &lt;span class='type'&gt;&lt;/span&gt;"
+      data-width="2000" data-height="1333" data-alt="Antelope, Arizona by Belle Co"&gt;
+      &lt;script type="text/content"&gt;
+        &lt;source type="image/avif" srcset="assets/img/button/pexels-belle-co-342005_2000_1333.avif"/&gt;
+        &lt;source type="image/webp" srcset="assets/img/button/pexels-belle-co-342005_2000_1333.webp"&gt;
+      &lt;/script&gt;
+    &lt;/a&gt;
+    &lt;a href="assets/img/button/pexels-quang-nguyen-vinh-2131841_2000_1334.jpg"
+      data-caption="&lt;a href='https://www.pexels.com/photo/calm-body-of-water-during-golden-hour-2131841/' target='_blank'&gt;@Quang Nguyen Vinh - Calm Body of Water during Golden Hour.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Image type is&nbsp;: &lt;span class='type'&gt;&lt;/span&gt;"
+      data-width="2000" data-height="1334" data-alt="Calm Body of Water during Golden Hour by Quang Nguyen Vinh"&gt;
+      &lt;script type="text/content"&gt;
+        &lt;source type="image/avif" srcset="assets/img/button/pexels-quang-nguyen-vinh-2131841_2000_1334.avif"/&gt;
+        &lt;source type="image/webp" srcset="assets/img/button/pexels-quang-nguyen-vinh-2131841_2000_1334.webp"&gt;
+      &lt;/script&gt;
+    &lt;/a&gt;
+    &lt;a href="assets/img/button/pexels-eberhard-grossgasteiger-1366835_2000_1333.jpg"
+      data-caption="&lt;a href='https://www.pexels.com/photo/mountain-rock-and-moon-1366835/' target='_blank'&gt;@eberhard grossgasteiger - Mountain Rock and Moon.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Image type is&nbsp;: &lt;span class='type'&gt;&lt;/span&gt;"
+      data-width="2000" data-height="1333" data-alt="Mountain Rock and Moon by eberhard grossgasteiger"&gt;
+      &lt;script type="text/content"&gt;
+        &lt;source type="image/avif" srcset="assets/img/button/pexels-eberhard-grossgasteiger-1366835_2000_1333.avif"/&gt;
+        &lt;source type="image/webp" srcset="assets/img/button/pexels-eberhard-grossgasteiger-1366835_2000_1333.webp"&gt;
+      &lt;/script&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre> <label for="show-code03">Code</label> </div><div class="line"></div><h3>Single</h3><div class="content-block"> <div class="demo-single-gallery"> <a href="assets/img/single/pexels-johannes-plenio-2080963_2000_1333.jpg" data-caption="<a href='https://www.pexels.com/photo/forest-at-night-2080963/' target='_blank'>@Johannes Plenio - Forest at Night.</a><br><span style='font-size:0.8em;'>Image type is&nbsp;: <span class='type'></span>" data-width="2000" data-height="1333"> <script type="text/content">
+        <source type="image/avif" srcset="assets/img/single/pexels-johannes-plenio-2080963_2000_1333.avif"/>
+        <source type="image/webp" srcset="assets/img/single/pexels-johannes-plenio-2080963_2000_1333.webp">
+      </script> <img src="assets/img/thumbs/single/pexels-johannes-plenio-2080963_200_133.jpg" alt="Forest at Night by Johannes Plenio"> </a> </div> </div><div class="code show-hide"> <input type="checkbox" id="show-code04" class="show-code" autocomplete="off"> <pre>
+    <h4>JAVASCRIPT</h4>
+<code class="language-js">import AmstramgramGallery from 'Amstramgram-Gallery'
+
+...
+
+new AmstramgramGallery('.demo-single-gallery a', function () { 
+  this.on('amst_gallery-load', onImgLoad) 
+})
+/**
+ * @param {Object} item : object holding properties of the loaded img
+ * @description Called each time an image has been loaded
+ *              Update the caption with the type and the dimensions 
+ *              of the displayed image
+ */
+function onImgLoad(e) {
+  if (AmstramgramGallery.visible) {
+    const
+      item = e.current,
+      //HTML figure element containing the image
+      figures = item.container,
+      //Get the image extension
+      type = item.currentSrc.split('.')[1].toUpperCase(),
+      width = item.width + 'px',
+      height = item.height + 'px',
+      text = `${width}&nbsp;/&nbsp;${height}.`
+    //Update the caption
+    figures.forEach(f => {
+      if (f.querySelector('span.type')) f.querySelector('span.type').innerHTML = type + '&nbsp;'
+      if (f.querySelector('span.dim')) f.querySelector('span.dim').innerHTML = text
+    })
+  }
+}
+</code>
+<h4>HTML</h4>
+<code class="language-html">&lt;div class="demo-single-gallery"&gt;
+  &lt;a href="assets/img/single/pexels-johannes-plenio-2080963_2000_1333.jpg"
+    data-caption="&lt;a href='https://www.pexels.com/photo/forest-at-night-2080963/' target='_blank'&gt;@Johannes Plenio - Forest at Night.&lt;/a&gt;&lt;br&gt;&lt;span style='font-size:0.8em;'&gt;Image type is&nbsp;: &lt;span class='type'&gt;&lt;/span&gt;"
+    data-width="2000" data-height="1333"&gt;
+    &lt;script type="text/content"&gt;
+        &lt;source type="image/avif" srcset="assets/img/single/pexels-johannes-plenio-2080963_2000_1333.avif"/&gt;
+        &lt;source type="image/webp" srcset="assets/img/single/pexels-johannes-plenio-2080963_2000_1333.webp"&gt;
+      &lt;/script&gt;
+    &lt;img src="assets/img/thumbs/single/pexels-johannes-plenio-2080963_200_133.jpg"
+      alt="Forest at Night by Johannes Plenio"&gt;
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre> <label for="show-code04">Code</label> </div><div class="line"></div><h3>Features</h3><div class="content-block text"> <ul class="features"> <li> Support for <em>captions</em> and for <em>title</em> and <em>alt</em> attributes. </li> <li> Responsive image with support of <em>source</em> tag and <em>srcset</em> attribute. </li> <li> On mobile devices, <em>Previous</em> and <em>Next</em> arrows are hidden. The transition from one image to another is carried out by a horizontal swipe gesture. A swipe down closes the gallery. A tap toggles the visibility of caption and close button. </li> <li> Keyboard shortcuts : left/right arrow goes to previous/next image. Escape key closes the gallery. </li> <li> Customizable labels for navigation items (default are "Previous" for left arrow, "Next" for right arrow and "Close" for close button). </li> <li> Customizable styles for the background overlay and navigation items colors (only for <a href="https://caniuse.com/css-variables" target="_blank">browsers supporting CSS custom properties</a> ). </li> <li> The maximum dimensions of the images are limited to their natural dimensions. </li> <li> Loop : when on the first gallery item, calling the previous one displays the last item. Reciprocally, calling the next item while on the last one displays the first item. </li> <li> Dedicated events are emitted before and after opening, before and after closing and on change and load. </li> </ul> <p> </p> </div><h2 id="installation">Installation</h2><h3>npm</h3><div class="code copy"> <pre><code class="language-shellsession">npm i -D amstramgram-gallery</code></pre> </div><p class="text">Then in your javascript :</p><div class="code copy"> <pre><code class="language-javascript">import AmstramgramGallery from 'Amstramgram-Gallery'</code></pre> </div><p class="text"> And in your css : </p><div class="code copy"> <pre><code class="language-css">@import  '../node_modules/amstramgram-gallery/css/amstramgramGallery.css';</code></pre> </div><h3 class="margin-top4">Manually</h3><p class="margin-top0 text"> Just <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Amstramgram75/Amstramgram-Gallery/tree/master/src" target="_blank">download the sources</a> and use them in your project. </p><p class="text">Then in your javascript :</p><div class="code copy"> <pre><code class="language-javascript">import AmstramgramGallery from './src_folder/amstramgramGallery.js'</code></pre> </div><p class="text">And in your css :</p><div class="code copy"> <pre><code class="language-css">@import  './src_folder/amstramgramGallery.css';</code></pre> </div><h3 class="margin-top4">Important note about supported browsers</h3><p class="margin-top0 text"> Whether you have chosen npm or manual way, you should be aware that you are dealing with a javascript module that must be transpiled to be correctly interpreted by some older browsers. You should use <a href="https://babeljs.io/" target="_blank">babel</a> to compile it. </p><p class="text"> In addition, it will be necessary to think of providing a set of polyfills for some old browsers that have trouble with modernity.<br> For example, Internet Explorer needs some help with those features :<br> </p><ul class="features"> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger" target="_blank">Number.isInteger()</a> </li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from" target="_blank">Array.from()</a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" target="_blank">Array.prototype.includes()</a></li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent" target="_blank">CustomEvent()</a> </li> <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet" target="_blank">WeakSet</a></li> </ul><p class="text"> All that has been configured for the current page as you can verify by testing it in Internet Explorer 11 or Safari 9... </p><h3 class="margin-top4">Ready to use (almost)</h3><p class="margin-top0 text"> Pick the <em>iife</em> javascript version you need from <a href="https://downgit.github.io/#/home?url=https://github.com/Amstramgram75/Amstramgram-Gallery/tree/master/src/iife" target="_blank">here</a> and your favorite <em>css</em> from <a href="https://downgit.github.io/#/home?url=https://github.com/Amstramgram75/Amstramgram-Gallery/tree/master/src/css" target="_blank">there</a>.<br> Add a pinch of polyfills you find <a href target="_blank">here</a>... </p><p class="text">Then in your <em>html</em> :</p><div class="code margin-top1"> <pre><code class="language-html">
+&lt;!-- Include the css --&gt;
+&lt;link type="text/css" rel="stylesheet" href="css/amstramgramGallery.css"&gt;
+
+&lt;!-- Load polyfills if needed--&gt;
+&lt;script&gt;
+  if (
+    typeof Number.isInteger !== 'function'
+    || !Array.from 
+    || !Array.prototype.includes
+    || typeof window.CustomEvent !== "function"
+    || typeof window.WeakSet !== "function"
+  ) {
+    console.log("Loading Amstramgram Gallery polyfills")
+    var d = document, s = d.createElement('script');
+    s.async = "false";
+    s.defer = "true";
+    s.src = "js/polyfills/amstramgramGalleryPolyfills.min.js";
+    d.head.appendChild(s);
+  } else {
+    console.log("%cNone of the Amstramgram Gallery polyfills are needed", "color: green;")
+  }
+&lt;/script&gt;
+
+&lt;!-- Include the javascript --&gt;
+&lt;script type="text/javascript" src="js/amstramgramGallery.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- And later --&gt;
+&lt;script&gt;
+  window.addEventListener("load", function () {
+    AmstramgramGallery('.gallery-item')
+  }, false)
+&lt;/script&gt;
+
+</code></pre> <p class="text">Look <a href="iife.html" target="_blank">here</a> for a real life demo...</p> <p class="text"> Alternatively, you could use <a href="https://polyfill.io/v3/" target="_blank">polyfill.io</a> like I have done <a href="polyfill-io.html" target="_blank">here</a>...<br> The <em>html</em> code looks like this : </p> <div class="code margin-top1"> <pre><code class="language-html">
+&lt;!-- Include the css --&gt;
+&lt;link type="text/css" rel="stylesheet" href="css/amstramgramGallery.css"&gt;
+
+&lt;!-- Load polyfills if needed--&gt;
+&lt;script src="https://polyfill.io/v3/polyfill.min.js?features=Number.isInteger%2CArray.from%2CArray.prototype.includes%2CCustomEvent%2CWeakSet"&gt;&lt;/script&gt;
+
+&lt;!-- Include the javascript --&gt;
+&lt;script type="text/javascript" src="js/amstramgramGallery.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- And later --&gt;
+&lt;script&gt;
+  window.addEventListener("load", function () {
+    AmstramgramGallery('.gallery-item')
+  }, false)
+&lt;/script&gt;
+
+</code></pre> </div> <h2 id="html-markup">HTML Markup</h2> <p class="text"> The gallery is built from the elements targeted by the css selector passed as a parameter to the constructor <em>AND</em> whose data-href attribute (or href attribute if you use anchor) points to an image with a valid extension (default valid extensions are : gif|jpg|jpeg|png|webp|avif). </p> <p class="text"> HTML markup might look like this : </p> <div class="code"> <pre><code class="language-html">&lt;!-- 
+  Example 01 :
+  const gallery_01 = new AmstramgramGallery('.gallery a')
+--&gt;
+&lt;div class="gallery"&gt;
+  &lt;a href="img/image_01.jpg" data-caption="First image caption" 
+    data-title="First image title" 
+    data-width="1600" data-height="1200"&gt;
+    &lt;script type="text/content"&gt;
+      &lt;source type="image/avif" srcset="img/image_01-400.avif"
+        media="(max-width: 400px), (max-height: 300px)""&gt;
+      &lt;source type="image/avif" srcset="img/image_01-600.avif"
+        media="(max-width: 600px), (max-height: 450px)""&gt;
+      &lt;source type="image/avif" srcset="img/image_01-1000.avif"
+        media="(max-width: 1000px), (max-height: 750px)""&gt;
+      &lt;source type="image/avif" srcset="img/image_01-1500.avif"
+        media="(max-width: 1500px), (max-height: 1125px)""&gt;
+      &lt;source type="image/avif" srcset="img/image_01-2000.avif"
+        media="(max-width: 2000px), (max-height: 1500px)""&gt;
+      &lt;source type="image/avif" srcset="img/image_01-2500.avif"
+        media="(max-width: 2500px), (max-height: 1875px)""&gt;
+      &lt;source type="image/avif" srcset="img/image_01-3000.avif"
+        media="(min-width: 2501px), (min-height: 1876px)""&gt;
+    &lt;/script&gt;
+    &lt;!--
+      Since there is no data-alt attribute,
+      the content of the thumbnail alt attribute will be given
+      to the image alt attribute in the gallery.
+    --&gt;
+    &lt;img src="img/thumbnails/image_01.jpg" alt="First image"&gt;
+  &lt;/a&gt;
+  ...
+  &lt;!--
+    This link will be ignored by the gallery constructor 
+    because its href attribute does not point to an image.
+  --&gt;
+  &lt;a href="https://www.wikipedia.org/"&gt;
+    &lt;img src="img/thumbnails/image_03.jpg"&gt;
+  &lt;/a&gt;
+  ...
+  &lt;a href="img/image_02.jpg" data-alt="Second image alt"&gt;
+    &lt;img src="img/thumbnails/image_02.jpg" alt="Second thumbnail alt"&gt;
+  &lt;/a&gt;
+  ...
+&lt;/div&gt;
+
+</code></pre> </div> <p class="text"> or that : </p> <div class="code"> <pre><code class="language-html">&lt;!-- 
+  Example 02 :
+  const gallery_02 = new AmstramgramGallery('.gallery-item')
+--&gt;
+&lt;div class="one_div"&gt;
+  ...
+  &lt;a href="img/image_01.jpg" class="gallery-item" data-caption="First image caption" data-title="First image title"
+    data-width="1600" data-height="1200"&gt;
+    &lt;img src="img/thumbnails/image_01.jpg" alt="First image"&gt;
+  &lt;/a&gt;
+  ...
+  &lt;!--
+    This link will be ignored by the gallery constructor 
+    because its href attribute does not point to an image.
+  --&gt;
+  &lt;a href="https://www.wikipedia.org/" class="gallery-item"&gt;
+    &lt;img src="img/thumbnails/image_03.jpg"&gt;
+  &lt;/a&gt;
+  ...
+&lt;/div&gt;
+...
+&lt;div class="another_div gallery-item" data-href="img/image_02.jpg" data-alt="Second image alt"&gt;
+  &lt;img src="img/thumbnails/image_02.jpg" alt="Second thumbnail alt"&gt;
+  ...
+&lt;/div&gt;
+
+</code></pre> </div> <h3 class="margin-top4">attributes data</h3> <h5 class="margin-top0">alt</h5> <p class="margin-top025 text"> If specified, the <em>data-alt</em> attribute of the gallery item defines the content of the <em>alt</em> attribute of the corresponding image in the gallery.<br> If omitted and if the gallery item contains an image tag with an alt attribute, this attribute will be given to the corresponding image in the gallery.<br> So the content of the alt attribute of the first image in the gallery in the two examples above will be <em>First image</em> since it is the content of the alt attribute of the thumbnail in the first anchor. </p> <h5>caption</h5> <p class="margin-top025 text"> If specified, the <em>data-caption</em> attribute of the gallery item defines the caption displayed for the corresponding image in the gallery. </p> <h5>srcset</h5> <p class="margin-top025 text"> If specified, the <em>data-srcset</em> attribute of the gallery item defines the content of the <em>srcset</em> attribute for the corresponding image in the gallery. </p> <h5>title</h5> <p class="margin-top025 text"> If specified, the <em>data-title</em> attribute of the gallery item defines the content of the <em>title</em> attribute for the corresponding image in the gallery. </p> <h5>width & height</h5> <p class="margin-top025 text"> If specified, the <em>data-width</em> and <em>data-height</em> attributes of the gallery item allow to add a border to the image in the gallery while it is loading. </p> <div class="line margin-top4"></div> <h3>Responsive image with <em>&lt;source&gt;</em> tag</h3> <p class="margin-top0 text"> Rather than using dedicated attributes to specify multiple sources based on screen size or type, I found it easier and more readable to put all the html markup in a <em>script</em> tag whose <em>type</em> attribute is set to <em>text/content</em>.<br> This markup is simply insert into the <em>picture</em> tag of the gallery.<br> You can see an illustration of this in the first example above or in the detailed HTML code of the demos. </p> <h2 id="api">API</h2> <h3>Static</h3> <h5>defaultOptions<br><span>getter/setter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @set defaultOptions
+ * @description : set the class default options
+ * @param {Object} opts
+ *  @key {String} overlayBackground : content of the overlay background css property
+ *                (Default: rgba(0, 0, 0, 0.9))
+ *  @key {String} navItemsBackground : content of the navigation items 
+ *                (close button, left and right arrows) background css property
+ *                (Default: rgba(33, 33, 33, 0.5))
+ *  @key {String} navItemsBackgroundHover : content of the navigation items 
+ *                (close button, left and right arrows) background css property
+ *                when hovered
+ *                (Default: rgba(33, 33, 33, 0.5))
+ *  @key {String} navItemsColor : color of the navigation items 
+ *                (close button, left and right arrows)
+ *                (Default: rgba(33, 33, 33, 0.5))
+ *  @key {String} navItemsColorHover : color of the navigation items 
+ *                (close button, left and right arrows) when hovered
+ *                (Default: rgba(33, 33, 33, 0.5))
+ *  @key {String} captionBackground : content of the captions
+ *                background css property
+ *                Default : rgba(0, 0, 0, 0.7)
+ *  @key {String} captionColor : color of the captions
+ *                Default : #fff
+ *  @key {String} captionFontFamily : font-family of the captions
+ *                Default : inherit
+ *  @key {String} captionFontSize : font-size of the captions
+ *                Default : 1em
+ *  @key {String} previousTitle : title attribute of the left arrow
+ *                (Default: 'Previous')
+ *  @key {String} previousAriaLabel : aria-label attribute of the left arrow
+ *                (Default: 'Previous')
+ *  @key {String} nextTitle : title attribute of the right arrow
+ *                (Default: 'Next')
+ *  @key {String} nextAriaLabel : aria-label attribute of the right arrow
+ *                (Default: 'Next')
+ *  @key {String} closeTitle : title attribute of the close button
+ *                (Default: 'Close')
+ *  @key {String} closeAriaLabel : aria-label attribute of the close button
+ *                (Default: 'Close')
+ */
+     
+//Set the default title and aria-label of the close button
+AmstramgramGallery.defaultOptions = {closeTitle: 'Fermer', closeAriaLabel: 'Fermer'}
+
+
+/**
+ * @get defaultOptions
+ * @returns {Object}
+ * @description : get the class default options
+ */
+
+//Get the default overlay background css property
+console.log(AmstramgramGallery.defaultOptions.overlayBackground)
+//Should output : rgba(0, 0, 0, 0.9)
+ </code></pre> </div> <h5>regexp<br><span>getter/setter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @set regexp
+ * @params {RegExp}
+ * @default : /.+\.(gif|jpe?g|png|webp|avif)(\?(.*))?$/i
+ * @description : set the regular expression to filter 
+ *                the allowed image extensions 
+ *                of the image pointed by the anchor.
+*/
+   
+//Only take in account images with jpg, webp or avif extension.
+AmstramgramGallery.regexp = /.+\.(jpg|webp|avif)(\?(.*))?$/i
+
+/**
+ * @get regexp
+ * @returns {RegExp}
+ * @description : get the class regexp
+ */
+
+//Get the class regexp
+console.log(AmstramgramGallery.regexp)
+//Should output : /.+\.(gif|jpe?g|png|webp|avif)(\?(.*))?$/i
+
+</code></pre> </div> <h5>visible<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @get visible
+ * @returns {Boolean}
+ * @description : returns true if a gallery is opened
+ */
+
+</code></pre> </div> <h5>overlay<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+  * @get overlay
+  * @returns {HTMLElement}
+  * @description : returns the overlay HTMLElement
+  */
+
+</code></pre> </div> <h5>galleries<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @get galleries
+ * @returns {Array}
+ * @description : returns an array of all the instantiated galleries
+ */
+
+</code></pre> </div> <h5>names<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @get names
+ * @returns {Set}
+ * @description : returns a set of all the instantiated galleries names
+ */
+
+</code></pre> </div> <h5>currentGallery<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @get currentGallery
+ * @returns {AmstramgramGallery}
+ * @description : returns the current gallery
+ */
+
+</code></pre> </div> <h5>getGalleryByName()<br><span>method</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @method getGalleryByName()
+ * @param {String} n : name of the searched gallery
+ * @returns the gallery instance whose name is n
+ */
+
+</code></pre> </div> <h5>events</h5> <p class="text"> <em>The Amstramgram Gallery class</em> extends <em>Amstramgram Event Emitter Light</em> so all the methods described <a href="https://amstramgram75.github.io/Amstramgram-Event-Emitter/light.html#api" target="_blank">here</a> are available. </p> <h5>on()<br><span>method</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @method on(events, callback)
+ * @param {String} events : one or more of the following names
+ *      amst_gallery-opening
+ *      amst_gallery-open
+ *      amst_gallery-load
+ *      amst_gallery-change
+ *      amst_gallery-closing
+ *      amst_gallery-close
+ * @param {function} callback : function called when the event is emitted
+ *    The object passed as an argument to the callback has these properties :
+ *      - current: an item object containing several information
+ *        about the currently displayed image
+ *      - gallery: the currently opened gallery instance 
+ *      - eventName: the name of the emitted event
+ *      And for the amst_gallery-change event :
+ *      - previous: an item object containing several informations
+ *        about the previously displayed image
+ * @returns this so methods can be chained.
+ */
+
+ AmstramgramGallery
+  .on('amst_gallery-open amst_gallery-close', function (e) {
+    //e.current is an object containing information about the currently displayed image
+    //e.gallery is a reference to the currently opened gallery instance
+    //e.eventName is the name of the emitted event : in this case, 'amst_gallery-open' or 'amst_gallery-close'
+    //Some logs (open dev tools to check the output):
+    let msg = `Gallery named "${e.gallery.name}" is now `
+    msg += (e.eventName == 'amst_gallery-open') ? 'opened' : 'closed'
+    console.log(`%c${msg}`, 'color: green; font-weight:bold;')
+  })
+  .on('amst_gallery-opening amst_gallery-closing', function (e) {
+    //Select all the direct body descendants except the gallery container
+    const content = Array.from(document.querySelectorAll('body > *:not(.amst_gallery-overlay)'))
+    let msg = `Gallery named "${e.gallery.name}" is `
+    if (e.eventName == 'amst_gallery-opening') {
+      //Add a blur class to the content elements
+      content.forEach(el=>el.classList.add('blur'))
+      msg += 'opening'
+    } else {
+      //Remove the blur class
+      content.forEach(el=>el.classList.remove('blur'))
+      msg += 'closing'
+    }
+    console.log(`%c${msg}`, 'color: green; font-weight:bold;')
+  })
+  .on('amst_gallery-change', function(e) {
+    //Some logs (open dev tools to check the output):
+    const s1 = 'color: green; font-weight: bold;', s2 = 'color: inherit;'
+    console.log(`%cDisplayed image in gallery named "${e.gallery.name}" has changed\n	from :	%c${e.previous.currentSrc}\n	%cto :	%c${e.current.currentSrc}`, s1, s2, s1, s2)
+  })
+
+</code></pre> </div> <h5>off()<br><span>method</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @description : remove a callback for a list of events.
+ * @param {string} events : list of event names separated by a space.
+ * @param {function} callback : callback to removed.
+ * @returns this so methods can be chained.
+**/
+AmstramgramGallery.off(events, callback)
+
+</code></pre> </div> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @description : remove all the registered callbacks for a list of events.
+ * @param {string} events : list of event names separated by a space.
+ * @returns this so methods can be chained.
+**/
+AmstramgramGallery.off(events)
+
+</code></pre> </div> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @description : remove the callback for all registered events.
+ * @param {function} callback : callback to removed.
+ * @returns this so methods can be chained.
+**/
+AmstramgramGallery.off(callback)
+
+</code></pre> </div> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @description : remove all registered events and callbacks.
+ * @returns this so methods can be chained.
+**/
+AmstramgramGallery.off()
+
+</code></pre> </div> <div class="line"></div> <h3>Instance</h3> <h5>constructor</h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @param {String} selector css selector defining the elements to be included in the gallery
+ * @param {Object} options gallery parameters
+ *  @key {String} name : name of the gallery
+ *                If the name is already in use, i'ts completed
+ *                by an incremented integer
+ *                ('myGallery' becomes 'myGallery-1').
+ *                If not set, an unique name is generated : 
+ *                'amst_gallery-' followed by an incremented integer
+ *                ('amst_gallery-1', 'amst_gallery-2', and so on)
+ *  @key {String} overlayBackground : content of the overlay background css property
+ *                Default : rgba(0, 0, 0, 0.9)
+ *  @key {String} navItemsBackground : content of the navigation items 
+ *                (close button, left and right arrows) background css property
+ *                Default : rgba(33, 33, 33, 0.5)
+ *  @key {String} navItemsBackgroundHover : content of the navigation items 
+ *                (close button, left and right arrows) background css property
+ *                when hovered
+ *                Default : rgba(33, 33, 33, 0.7)
+ *  @key {String} navItemsColor : color of the navigation items 
+ *                (close button, left and right arrows)
+ *                Default : #aaa
+ *  @key {String} navItemsColorHover : color of the navigation items 
+ *                (close button, left and right arrows) when hovered
+ *                Default : #ddd
+ *  @key {String} captionBackground : content of the captions
+ *                background css property
+ *                Default : rgba(0, 0, 0, 0.7)
+ *  @key {String} captionColor : color of the captions
+ *                Default : #fff
+ *  @key {String} captionFontFamily : font-family of the captions
+ *                Default : inherit
+ *  @key {String} captionFontSize : font-size of the captions
+ *                Default : 1em
+ *  @key {String} previousTitle : title attribute of the left arrow
+ *                Default : 'Previous'
+ *  @key {String} previousAriaLabel : aria-label attribute of the left arrow
+ *                Default : 'Previous'
+ *  @key {String} nextTitle : title attribute of the right arrow
+ *                Default : 'Next'
+ *  @key {String} nextAriaLabel : aria-label attribute of the right arrow
+ *                Default : 'Next'
+ *  @key {String} closeTitle : title attribute of the close button
+ *                Default : 'Close'
+ *  @key {String} closeAriaLabel : aria-label attribute of the close button
+ *                Default : 'Close'
+ * @param {function} callback function called when gallery is initialized
+ */
+ 
+new AmstramgramGallery(selector, options = {}, callback)
+
+//Or if no need to customize options :
+new AmstramgramGallery(selector, function(){
+  //Log the gallery items array when gallery is initialized
+  console.log(this.items)
+})
+
+//Or simply :
+new AmstramgramGallery(selector)
+
+</code></pre> </div> <h5>options<br><span>getter/setter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @get options
+ * @returns {Object}
+ * @description : returns the gallery options object
+ */
+
+/**
+ * @set options
+ * @param {Object} opts
+ * @description : set the gallery options
+ */
+
+ //Take a look at the button demo code:
+ //Navigation arrows titles are updated 
+ //each time the displayed image changes
+ 
+</code></pre> </div> <h5>items<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @get items
+ * @returns {Array}
+ * @description : returns an array of all gallery items
+ * A gallery item is an object with the following properties :
+ *       @key alt {String} : content of the img alt attribute
+ *       @key caption {String} : content of the img caption
+ *       @key container {Array} : An array of the item containers.
+ *            For the first and last items, the array is composed of
+ *            two figures (to achieve the loop effect).
+ *            For all the others, it contains only one figure.
+ *       @key content {String} : the HTML content of the picture tag
+ *       @key currentSrc {String} : value of the img currentSrc property 
+ *            (identical to src property if currentSrc is not supported)
+ *       @key height {Integer} : content of the img height attribute
+ *       @key id {Integer} : item identifier 
+ *            (0 for the first image, 1 for the second, ...)
+ *       @key loaded {Boolean} : true when img is loaded
+ *            Reset to false when another gallery is opened
+ *       @key loading {Boolean} : true when img is loading
+ *            Reset to false when another gallery is opened
+ *       @key next {Integer} : id of the next item
+ *            -1 if there is only one image in the gallery
+ *            0 (ie first item id) if the current item is the last
+ *       @key previous {Integer} : id of the previous item
+ *            -1 if there is only one image in the gallery
+ *            id of the last gallery item if the current item is the first
+ *       @key ratio {Number} : image ratio ie width/height
+ *       @key sources {String} : content of the picture source tag
+ *       @key src {String} : content of the img src attribute
+ *       @key srcset {String} : content of the img srcset attribute
+ *       @key title {String} : content of the img title attribute
+ *       @key width {Integer} : content of the img width attribute
+ * 
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ *  when another gallery is opened :
+ *    - loading and loaded properties are reset to false 
+ *    - container property is reset to an empty array []
+ *    - currentSrc property is set equal to src
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+ 
+ const myGallery = new AmstramgramGallery('.gallery-item', _ => {
+  console.log(myGallery.items)
+ })
+
+</code></pre> </div> <h5>currentId<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">/**
+ * @get currentId
+ * @returns {Integer}
+ * @description : returns the currently display item id
+ * Reset to -1 when another gallery is opened
+ */
+
+console.log(myGallery.items[myGallery.currentId])
+
+</code></pre> </div> <h5>currentItem<br><span>getter</span></h5> <div class="code"> <pre><code class="language-javascript">/**
+ * @get currentItem
+ * @returns {Object}
+ * @description : returns the currently display item
+ * Reset to false when another gallery is opened
+ * A gallery item is an object with the following properties :
+ *       @key alt {String} : content of the img alt attribute
+ *       @key caption {String} : content of the img caption
+ *       @key container {Array} : An array of the item containers.
+ *            For the first and last items, the array is composed of
+ *            two figures (to achieve the loop effect).
+ *            For all the others, it contains only one figure.
+ *       @key content {String} : the HTML content of the picture tag
+ *       @key currentSrc {String} : value of the img currentSrc property 
+ *            (identical to src property if currentSrc is not supported)
+ *       @key height {Integer} : content of the img height attribute
+ *       @key id {Integer} : item identifier 
+ *            (0 for the first image, 1 for the second, ...)
+ *       @key loaded {Boolean} : true when img is loaded
+ *            Reset to false when another gallery is opened
+ *       @key loading {Boolean} : true when img is loading
+ *            Reset to false when another gallery is opened
+ *       @key next {Integer} : id of the next item
+ *            -1 if there is only one image in the gallery
+ *            0 (ie first item id) if the current item is the last
+ *       @key previous {Integer} : id of the previous item
+ *            -1 if there is only one image in the gallery
+ *            id of the last gallery item if the current item is the first
+ *       @key ratio {Number} : image ratio ie width/height
+ *       @key sources {String} : content of the picture source tag
+ *       @key src {String} : content of the img src attribute
+ *       @key srcset {String} : content of the img srcset attribute
+ *       @key title {String} : content of the img title attribute
+ *       @key width {Integer} : content of the img width attribute
+ * 
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ *  when another gallery is opened :
+ *    - loading and loaded properties are reset to false 
+ *    - container property is reset to an empty array []
+ *    - currentSrc property is set equal to src
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
+
+</code></pre> </div> <h5>show()<br><span>method</span></h5> <div class="code"> <pre><code class="language-javascript">
+/**
+ * @method show(id)
+ * @param {Integer} [0] id
+ * @description : shows the image whose item identifier is id
+ */
+    
+ //Shows the third item of myGallery
+ myGallery.show(2)
+
+</code></pre> </div> <h5>on() and off()<br><span>methods</span></h5> <p class="text"> These methods apply the same way to instances as to class.<br> As an example, look at the code used for responsive, button or single demo : a listener is put on the <em>amst_gallery-load</em> event emitted by the instance each time an image is loaded. </p> </div><div></div> </div> </div> <div class="up"></div> <link rel="stylesheet" href="css/main.css" media="print" onload="this.media=&quot;all&quot;"> </body></html>

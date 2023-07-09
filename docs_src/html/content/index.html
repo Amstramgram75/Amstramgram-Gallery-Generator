@@ -1,0 +1,266 @@
+<h2 id="why">Why</h2>
+<p class="text">
+  The idea came to me using the Amstramgram Gallery library that I built some time ago.<br>
+  Providing a set of images of different sizes and formats is a lot of work.<br>
+  I then thought it would be a good idea to automate this tedious task.<br>
+  Here is the result of this little work...
+</p>
+<h2 id="installation">Installation</h2>
+<h3>npm</h3>
+<div class="code copy">
+  <pre><code class="language-shellsession">npm i -D amstramgram-gallery-generator</code></pre>
+</div>
+<p class="text">Then in a command line :</p>
+<div class="code copy">
+  <pre><code class="language-shellsession">AGG</code></pre>
+</div>
+<h2 id="usage">Usage</h2>
+<p class="text">
+  By default, the script takes all the images it finds in the <em>img</em> folder and processes them into an
+  <em>imgProcessed</em> folder.<br>
+  Processes formats are <em>avif</em>, <em>jpg</em> and <em>webp</em>.<br>
+  Processes widths are : 400, 800, 1200, 1600, 2000, 2400, 2800 and 3200 pixels.
+</p>
+<p class="text">
+  In addition, the script can generate thumbnails as well as the HTML code to integrate into the Amstramgram Gallery library.
+</p>
+<h2 id="configuration">Configuration</h2>
+<p class="text">
+  Many options are available using a configuration file.
+</p>
+<div class="code copy">
+  <pre><code class="language-shellsession">AGG --config myConfigFile.mjs</code></pre>
+</div>
+<p class="text">
+  Or with a shortcut :
+</p>
+<div class="code copy">
+  <pre><code class="language-shellsession">AGG -c myConfigFile.mjs</code></pre>
+</div>
+<p class="text">
+  The configuration file should provide an object as default export.
+</p>
+<h5 class="margin-top4">from</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {string} from
+ * @default : 'img/'
+ * Path of the folder containing the images to be processed.
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">to</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {string} to
+ * @default : 'imgProcessed/'
+ * Path of the destination folder (if it does not exist, it will be created).
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">exts</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {string||string[]} exts
+ * @default : ['.avif', '.gif', '.jpeg', '.jpg', '.png', '.webp']
+ * Sets the extensions of the files to be processed.
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">formats</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {string||string[]} formats
+ * @default : ['.avif', '.webp', '.jpg']
+ * Sets the formats in which images are processed.
+ * Note that output formats are restricted to avif, jpg or webp. 
+ * @example : 
+ *    formats: "avif"
+ *  or
+ *    formats: ".avif"
+ *  or
+ *    formats: [".avif"]
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">widths</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {integer||integer[]} widths
+ * @default : [400, 800, 1200, 1600, 2000, 2400, 2800, 3200]
+ * Sets the widths in which images are processed.
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">maxHeight</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {integer} maxHeight
+ * @default : 3200
+ * Sets the maximum height of the processed images.
+ * If an image is 4000 x 6000, the resulting height
+ * for a 2400 width will be 3600.
+ * With the default settings above, 
+ * only the 400, 800, 1200, 1600 and 2000 
+ * images will be processed.
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">name</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {function} name
+ * @return {string}
+ * @default : (originalName, processedWidth, processedHeight) => return originalName + '_' + processedWidth + '_' + processedHeight
+ * Defines how the processed image is renamed.
+ * originalName, processedWidth, processedHeight, title, creator, description 
+ * are passed as parameters to the function.
+ * title, creator and description are taken from xmp datas dc:title, dc:creator and dc:description.
+ * You can edit these properties with XnView MP, freeware available for Windows, Mac and Linux.
+ * https://www.xnview.com/en/xnviewmp/#downloads
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">verbose</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {boolean} verbose
+ * @default : true
+ * If false, no log will be emitted.
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">force</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {boolean} force
+ * @default : false
+ * If false, the script will only processed images that are not already in output directory.
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">thumbnails</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {boolean|object} thumbnails
+ * @default : false
+ * If true, thumbnails will be generated with default settings.
+ * If it's an object, it could have the following properties :
+ *    @param {string} to
+ *    @default : 'imgProcessed/thumbs/'
+ *    Path of the destination folder (if it does not exist, it will be created).
+ *    By default, a thumbs folder is created in the destination folder specified by the main to option.
+ *    @param {function} name
+ *    @return {string}
+ *    @default : (originalName, processedWidth) => return originalName + '_' + processedWidth
+ *    Defines how the processed thumbnail is renamed.
+ *    originalName, processedWidth, title, creator, description 
+ *    are passed as parameters to the function
+ *    title, creator and description are taken from xmp datas dc:title, dc:creator and dc:description.
+ *    You can edit these properties with XnView MP, freeware available for Windows, Mac and Linux.
+ *    https://www.xnview.com/en/xnviewmp/#downloads
+ *    @param {integer||integer[]} widths
+ *    @default : 100
+ *    Sets the widths in which thumbnails are processed.
+ *    @param {boolean} square
+ *    @default : true
+ *    By default, processed thumbnails are square.
+ *    If property is set to false, aspect-ratio will be preserved.
+ *    @param {string||string[]} formats
+ *    @default : ['.avif', '.webp', '.jpg']
+ *    Sets the format in which thumbnails are processed
+ *    @param {integer||integer[]} queries
+ *    @default : undefined
+ *    Sets the media queries generated if html option is true.
+ *    EXAMPLE : 
+ *    With a configuration defined as :
+ *        thumbnails: &#123;
+ *          widths: [100, 120],
+ *          formats: "jpg",
+ *          queries: 1024
+ *        &#125;
+ *    The generated html is of the form :
+ *    &lt;source type="image/jpeg" srcset="thumbnail_100.jpg"/&gt;
+ *    &lt;source type="image/jpeg" srcset="thumbnail_120.jpg" media="(min-width:1024px)"/&gt;
+ *    Thus, for a screen smaller than 1024px, the thumbnail displayed is 100 pixels wide.
+ *    For others, the displayed thumbnail is 120 pixels wide.
+ *    !!! Note that queries array length must be equal to widths array length - 1 !!!
+**/
+</code></pre>
+</div>
+<h5 class="margin-top2">html</h5>
+<div class="code">
+  <pre><code class="language-javascript">/**
+ * @param {boolean|object} html
+ * @default : false
+ * If true, html will be written to file with default settings.
+ * If it's an object, it could have the following properties :
+ *    @param {string} to
+ *    @default: same as main to option
+ *    Path of the destination folder (if it does not exist, it will be created).
+ *    @param {string} name
+ *    @default : "gallery.html"
+ *    Name including extension of the generated file.
+ *    @param {string|function} container
+ *    @return {string}
+ *    @default : () => return 'a'
+ *    Sets the HTMLElement used as wrapper.
+ *    ("div" for &lt;div&gt;&lt;/div&gt;, "span" for &lt;span&gt;&lt;/span&gt;...).
+ *    originalName, title, creator, description 
+ *    are passed as parameters to the function
+ *    title, creator and description are taken from xmp datas dc:title, dc:creator and dc:description.
+ *    You can edit these properties with XnView MP, freeware available for Windows, Mac and Linux.
+ *    https://www.xnview.com/en/xnviewmp/#downloads
+ *    @param {string|function} comment
+ *    @return {string}
+ *    @default : () => return ''
+ *    The content of the comment inserted before the container.
+ *    @param {string|function} class
+ *    @return {string}
+ *    @default : () => return ''
+ *    The value given to the class attribute of the container.
+ *    @param {string|function} more
+ *    @return {string}
+ *    @default : () => return ''
+ *    Any additional attributes you want to add.
+ *    @param {string|function} caption
+ *    @return {string}
+ *    @default : () => return ''
+ *    The value given to the data-caption attribute of the container.
+ *    @param {string|function} alt
+ *    @return {string}
+ *    @default : () => return ''
+ *    The value given to the data-alt attribute of the container.
+ *    @param {string|function} title
+ *    @return {string}
+ *    @default : () => return ''
+ *    The value given to the data-title attribute of the container.
+ *    @param {string|function} start
+ *    @return {string}
+ *    @default : () => return ''
+ *    The html content of the container inserted before the thumbnail.
+ *    @param {boolean} thumbnail
+ *    @return {Boolean}
+ *    @default : Default is true if main thumbnails option is set to true.
+ *    If true, the thumbnail is included in container content between contentStart and contentEnd.
+ *    The option will be effective only if thumbnails are generated.
+ *    @param {string|function} thumbnailAlt
+ *    @return {string}
+ *    @default : () => return ''
+ *    Content of the thumbnail alt attribute.
+ *    @param {string|function} thumbnailTitle
+ *    @return {string}
+ *    @default : () => return ''
+ *    Content of the thumbnail title attribute.
+ *    @param {string|function} end
+ *    @return {string}
+ *    @default : () => return ''
+ *    The html content of the container inserted after the thumbnail.
+ *    @param {integer} width
+ *    @default : 2000
+ *    Width used for the fallback .jpg image.
+ *    !!!Note that jpg images are always generated if html is true!!!
+**/
+</code></pre>
+</div>
+<div></div>
