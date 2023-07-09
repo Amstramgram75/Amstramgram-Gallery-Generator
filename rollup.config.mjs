@@ -60,7 +60,7 @@ if (process.env.BUILD === 'production') {
   fsExtra.emptyDirSync(dist)
   fsExtra.copySync(`${app}amstramgramGalleryGenerator.mjs`, `${dist}amstramgramGalleryGenerator.mjs`)
   fsExtra.copySync(`${app}package.json`, `${dist}package.json`)
-  fsExtra.copySync(`readme.md`, `${dist}readme.md`)
+  fsExtra.copySync(`${app}readme.md`, `${dist}readme.md`)
   //Create prod/assets if it does not exist, 
   fsExtra.ensureDirSync(`${prod}assets/`)
   const

@@ -2,35 +2,6 @@
 
 ___
 
-If you just want to test, download or clone the repo.
-
-Then, in the **src** folder, run :
-
-    npm install
-    npm link
-In the **root** folder, run :
-
-    npm link amstramgram-gallery-generator
-    AGG
-
-Look at the new created **imgProcessed** folder.
-
-&nbsp;
-___
-
-**Don't forget to clean up the link when you're done playing.**
-
-In the **root** folder, run :
-
-    npm unlink amstramgram-gallery-generator
-
-Then, in the **src** folder, run :
-
-    npm unlink -g
-
-&nbsp;
-___
-
 [__DOCS & DEMO__](https://amstramgram75.github.io/Amstramgram-Gallery-Generator/)
 
 ___
