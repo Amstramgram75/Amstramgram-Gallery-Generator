@@ -213,7 +213,7 @@ let
   inputImgExtensions = new Set(['.avif', '.gif', '.jpeg', '.jpg', '.png', '.webp']),
   outputImgFormats = AVAILABLE_OUTPUT_IMG_FORMATS,
   outputImgWidths = new Set([400, 800, 1200, 1600, 2000, 2400, 2800, 3200]),
-  outputImgMaxHeight = 2000,
+  outputImgMaxHeight = 2800,
   processedImgName = (name, width, height) => {
     return name + '_' + width + '_' + height
   },
@@ -399,7 +399,7 @@ async function readConfig(config) {
       log(red(`${italic('maxHeight')} option must be an integer greater than 0.`))
       return
     }
-    outputImgMaxHeight = Math.round(data.maxHeight)
+    outputImgMaxHeight = Math.round(config.maxHeight)
   }
 
   //Check name option
@@ -635,17 +635,11 @@ async function checkInOut() {
     fs.ensureDirSync(thumbnails.dir)
   }
 
-  // if (html) {
-  //   html.dir = normalizeFolderPath(html.dir)
-  //   fs.ensureDirSync(html.dir)
-  // }
-
   await doProcessing()
   if (html !== false) {
     html.dir = normalizeFolderPath(html.dir)
     fs.ensureDirSync(html.dir)
     writeHTML()
-    // await writeHTML()
   }
 
   log(green(`\n***************\n ALL DONE !!!!\n***************`))
@@ -678,8 +672,8 @@ async function doProcessing() {
           originalWidth = metadata.width,
           originalHeight = metadata.height
         let
-          widthsToProcessed = Array.from(outputImgWidths).filter(w => w < originalWidth && Math.floor(w * originalHeight / originalWidth) < outputImgMaxHeight)
-        if (widthsToProcessed.length == 0 && originalHeight > outputImgMaxHeight) {
+          widthsToProcessed = Array.from(outputImgWidths).filter(w => w <= originalWidth && Math.floor(w * originalHeight / originalWidth) <= outputImgMaxHeight)
+        if (widthsToProcessed.length == 0 && originalHeight >= outputImgMaxHeight) {
           widthsToProcessed = [Math.floor(outputImgMaxHeight * originalWidth / originalHeight)]
         }
         if (widthsToProcessed.length == 0) {
